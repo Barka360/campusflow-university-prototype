@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f8fb" />
+  <title>CampusFlow — Student Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#dashboard" aria-label="CampusFlow home">
+        <span class="brand-mark">C</span><span class="brand-name">campus<span>flow</span></span>
+      </a>
+      <div class="workspace-label">WORKSPACE</div>
+      <button class="workspace-switch" id="scopeButton"><span class="scope-icon">⌂</span><span class="scope-text"><b id="scopeTitle">University-wide</b><small id="scopeSub">Administrator view</small></span><span class="chevron">⌄</span></button>
+      <div class="nav-label">OVERVIEW</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="dashboard"><span class="nav-icon">▦</span> Dashboard</button>
+        <button class="nav-item" data-view="students"><span class="nav-icon">♧</span> Students <span class="nav-count" id="studentNavCount">248</span></button>
+        <button class="nav-item" data-view="clearance"><span class="nav-icon">◷</span> Clearance <span class="nav-dot"></span></button>
+        <button class="nav-item" data-view="documents"><span class="nav-icon">▤</span> Documents</button>
+      </nav>
+      <div class="nav-label nav-label-spaced">STUDENT SERVICES</div>
+      <nav class="main-nav" aria-label="Student service navigation">
+        <button class="nav-item" data-view="clinic"><span class="nav-icon">✚</span> Campus clinic</button>
+        <button class="nav-item" data-view="student-affairs"><span class="nav-icon">♙</span> Student affairs</button>
+        <button class="nav-item" data-view="id-cards"><span class="nav-icon">▣</span> ID cards <span class="nav-count coral" id="idNavCount">18</span></button>
+      </nav>
+      <div class="nav-label nav-label-spaced">MANAGEMENT</div>
+      <nav class="main-nav" aria-label="Management navigation">
+        <button class="nav-item" data-view="analytics"><span class="nav-icon">▥</span> Statistics</button>
+        <button class="nav-item" data-view="activity"><span class="nav-icon">◉</span> Activity log</button>
+        <button class="nav-item" data-view="settings"><span class="nav-icon">⚙</span> Settings</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="help-card"><div class="help-bubble">✦</div><b>Need a hand?</b><p>Visit the help centre for guides and support.</p><button class="text-button" id="helpButton">Open help centre <span>↗</span></button></div><button class="profile"><span class="avatar avatar-user">AO</span><span class="profile-text"><b id="userName">Admin Officer</b><small id="userRole">University Admin</small></span><span class="more">···</span></button></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+        <div class="breadcrumbs"><span>University</span><span class="crumb-sep">/</span><b id="breadcrumbCurrent">Dashboard</b></div>
+        <div class="top-actions"><button class="icon-button" id="searchOpen" aria-label="Search">⌕</button><button class="icon-button notification-button" id="notifications" aria-label="Notifications">♧<i></i></button><div class="top-divider"></div><button class="top-profile" id="roleButton"><span class="avatar avatar-user">AO</span><span><b id="topName">Admin Officer</b><small id="topRole">University Admin</small></span><span class="chevron">⌄</span></button></div>
+      </header>
+      <div class="page-content" id="pageContent"></div>
+    </main>
+  </div>
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+  <div class="modal-layer" id="modalLayer" aria-hidden="true"><div class="modal-backdrop" data-close="true"></div><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-head"><div><div class="eyebrow" id="modalEyebrow">CAMPUSFLOW</div><h2 id="modalTitle">Title</h2></div><button class="icon-button modal-close" data-close="true" aria-label="Close">×</button></div><div class="modal-body" id="modalBody"></div><div class="modal-actions" id="modalActions"></div></section></div>
+  <script src="app.js"></script>
+</body>
+</html>
+
